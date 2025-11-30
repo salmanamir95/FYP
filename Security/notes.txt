@@ -1,0 +1,85 @@
+### **1. Key Generation**
+
+* Generate Ed25519 key pair (private + public):
+
+```bash
+openssl genpkey -algorithm Ed25519 -out node_private.pem
+openssl pkey -in node_private.pem -pubout -out node_public.pem
+```
+
+* ✅ Private key → sign messages
+* ✅ Public key → verify messages
+
+---
+
+### **2. Certificate Creation (for blockchain registration)**
+
+```bash
+openssl req -new -x509 -key node_private.pem -out node_cert.pem -days 365
+```
+
+* Self-signed certificate includes:
+
+  * Public key (`PK`)
+  * Node identity (`ID`) from CN/OU
+  * Certificate signature (EdDSA)
+
+---
+
+### **3. Signing Messages**
+
+* OpenSSL CLI **cannot sign arbitrary messages with Ed25519**.
+* Use a library (Python `cryptography`, libsodium, mbedTLS):
+
+```python
+signature = private_key.sign(message)
+```
+
+* Output → 64-byte binary signature → **encode in Base64 or hex** for blockchain.
+
+---
+
+### **4. Verifying Messages**
+
+```python
+public_key.verify(signature, message)
+```
+
+* Correct if signature matches message and key.
+* Decode Base64/hex first if stored that way.
+
+---
+
+### **5. Blockchain Registration**
+
+Store `<PK, Signature, ID>` for each node:
+
+* `PK` → node_public.pem
+* `Signature` → optional registration signature / certificate signature
+* `ID` → CN or OU from certificate
+
+---
+
+### **6. Notes / Gotchas**
+
+* Raw Ed25519 signatures are **binary**, encode for storage.
+* OpenSSL CLI only works for **key/certificate generation**, not raw signing.
+* On ESP32, use **mbedTLS or libsodium** for signing/verifying messages.
+
+---
+
+✅ **Bottom line:**
+
+* Key + certificate generation → OpenSSL CLI
+* Message signing / verification → library code (Python, ESP32, libsodium, mbedTLS)
+* Blockchain storage → `<PK, Signature, ID>`
+* Ed25519 is **fast, secure, and efficient** for your IoT/MANET nodes.
+
+---
+
+If you want, I can make a **1-page workflow diagram showing exactly how your MANET nodes generate keys, sign messages, verify, and register on blockchain** — fully Ed25519-compatible.
+
+Do you want me to do that?
+
+
+openssl x509 -in node_cert.pem -text -noout
