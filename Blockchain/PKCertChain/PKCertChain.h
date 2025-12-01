@@ -23,7 +23,7 @@ public:
     nodeReg* head;
     nodeReg* tail;
 
-    vector<uint8_t> something
+    
 
 
     PKCertChain();
