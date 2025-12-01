@@ -1,0 +1,3 @@
+/home/lenovo/Public/FYP/build/CMakeFiles/DataExSys.dir
+/home/lenovo/Public/FYP/build/CMakeFiles/edit_cache.dir
+/home/lenovo/Public/FYP/build/CMakeFiles/rebuild_cache.dir

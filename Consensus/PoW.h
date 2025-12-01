@@ -1,16 +1,15 @@
+#pragma once
 #include <iostream>
 #include <stdint.h>
-#include "../Blockchain/nodeReg.h"
-#include "Serialize.h"
-#include "Hash.h"
-#include "CSPRNG.h"
+#include <array>
+#include <Blockchain/PKCertChain/nodeReg.h>
+#include <Helper/Serialize.h>
+#include <Helper/Hash.h>
+#include <Helper/CSPRNG.h>
+#include <Consensus/PowChallenge.h>
 using namespace std;
 
 
-typedef struct {
-    vector<uint8_t> challenge; //32 bytes fixed
-    vector<uint8_t> difficulty; //2 bytes fixed
-} PowChallenge;
 
-PowChallenge* GeneratePoWChallenge(nodeReg* prevBlock , uint16_t& id, array<uint8_t,32> publicKey, array<uint8_t, 64> signature);
-PoWChallenge* SolvePowChallenge(PowChallenge& challenge);
+PowChallenge* GeneratePoWChallenge(nodeReg* prevBlock, uint16_t& id, std::array<uint8_t, 32> publicKey, std::array<uint8_t, 64> signature);
+uint64_t SolvePowChallenge(PowChallenge& challenge);

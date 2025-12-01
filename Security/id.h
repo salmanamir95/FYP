@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <openssl/rand.h>
 #include <cstdint>

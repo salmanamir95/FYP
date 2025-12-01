@@ -1,17 +1,17 @@
-#include "PoW.h"
-#include <stdio.h>
-#include <stdint.h>
-#include <string.h>
-#include <openssl/sha.h>
+#include <cstdint>
 #include <vector>
-#include <arpa/inet.h>
+#include <array>
 #include <thread>
-#include <atomic>
-#include <limits>
 #include <stop_token>
+#include <atomic>
+#include <openssl/sha.h>
+#include <arpa/inet.h>
+#include <stdexcept>
+#include <limits>
+#include <cstring>
+#include <Consensus/PoW.h>
 
-
-PowChallenge* GeneratePoWChallenge(nodeReg* prevBlock, uint16_t& id, array<uint8_t,32> publicKey, array<uint8_t, 64> signature){
+PowChallenge* GeneratePoWChallenge(nodeReg* prevBlock, uint16_t& id, std::array<uint8_t,32> publicKey, std::array<uint8_t, 64> signature){
     vector<uint8_t> bytes = serializeNode(*prevBlock);
     vector<uint8_t> id_bytes = BE16(id);
     bytes.insert(bytes.end(), id_bytes.begin(), id_bytes.end());

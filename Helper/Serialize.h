@@ -1,11 +1,12 @@
 #pragma once
+#include<thread>
 #include <vector>
 #include <array>
 #include <cstdint>
 #include <ctime>
 #include <arpa/inet.h> // for htons, htonl
-#include "../Blockchain/nodeReg.h"
-
+#include <Blockchain/PKCertChain/nodeReg.h>
+#include <Consensus/PowChallenge.h>
 using namespace std;
 
 // ----------- Runtime Endian Detection -----------
@@ -116,10 +117,10 @@ inline vector<uint8_t> serializePowChallenge(const PowChallenge& chal) {
     vector<uint8_t> bytes;
     
     // Append R (32 bytes)
-    bytes.insert(bytes.end(), chal.R.begin(), chal.R.end());
+    bytes.insert(bytes.end(), chal.challenge.begin(), chal.challenge.end());
 
     // Append T (2 bytes)
-    bytes.insert(bytes.end(), chal.T.begin(), chal.T.end());
+    bytes.insert(bytes.end(), chal.difficulty.begin(), chal.difficulty.end());
 
     return bytes;
 }

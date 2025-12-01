@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <array>
 #include <ctime>
@@ -6,6 +7,7 @@
 using namespace std;
 
 class certificate{
+public:
     uint16_t nodeID;
     array<uint8_t,32> publicKey;
     array<uint8_t,64> signature;

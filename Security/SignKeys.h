@@ -1,3 +1,4 @@
+#pragma once
 #include <openssl/evp.h>
 #include <openssl/pem.h>
 #include <openssl/sha.h>
