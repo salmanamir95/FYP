@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['1_20–_20physical_20phy_20layer_20strong_0',['1 – physical phy layer strong',['../d7/df7/md_BeyondScope_27OSIPerf.html#autotoc_md1',1,'&lt;strong&gt;Layer 1 – Physical (PHY Layer)&lt;/strong&gt;'],['../d2/d23/md_BeyondScope_2OSISec.html',1,'&lt;strong&gt;Layer 1 – Physical (PHY Layer)&lt;/strong&gt;']]],
+  ['1_20adaptive_20resource_20allocator_20strong_1',['&lt;strong&gt;1. Adaptive Resource Allocator&lt;/strong&gt;',['../df/d92/md_BeyondScope_2VerticalPerf.html#autotoc_md38',1,'']]],
+  ['1_20application_20layer_20performance_20modules_20strong_2',['✅ &lt;strong&gt;1) Application Layer Performance Modules&lt;/strong&gt;',['../df/d92/md_BeyondScope_2VerticalPerf.html',1,'']]],
+  ['1_20application_20layer_20security_20modules_20strong_3',['&lt;strong&gt;1) Application Layer Security Modules&lt;/strong&gt;',['../df/d3d/md_BeyondScope_2VerticalSec.html#autotoc_md66',1,'']]],
+  ['1_20concurrency_20architecture_20strong_4',['&lt;strong&gt;1. Concurrency Architecture&lt;/strong&gt;',['../d8/d1a/md_Security_2to-do.html#autotoc_md217',1,'']]],
+  ['1_20prerequisites_5',['1. Prerequisites',['../d0/d30/md_README.html#autotoc_md96',1,'']]],
+  ['1_20production_20ready_20library_20strong_6',['✔ &lt;strong&gt;1) Production-ready library&lt;/strong&gt;',['../da/d38/md_Security_2docs.html#autotoc_md106',1,'']]],
+  ['1_20secure_20execution_20sandbox_20strong_7',['&lt;strong&gt;1. Secure Execution Sandbox&lt;/strong&gt;',['../df/d3d/md_BeyondScope_2VerticalSec.html#autotoc_md67',1,'']]],
+  ['1_20translating_20your_20sdk_20into_20pure_20c_20good_20idea_20strong_8',['✅ &lt;strong&gt;1. Translating Your SDK Into Pure C (GOOD IDEA)&lt;/strong&gt;',['../dd/da2/md_Security_2FYP2.html#autotoc_md160',1,'']]],
+  ['10_20least_20privilege_20network_20hooks_20strong_9',['&lt;strong&gt;10. Least-Privilege Network Hooks&lt;/strong&gt;',['../df/d3d/md_BeyondScope_2VerticalSec.html#autotoc_md80',1,'']]],
+  ['10_20testing_20validation_20strong_10',['&lt;strong&gt;10. Testing &amp; Validation&lt;/strong&gt;',['../d8/d1a/md_Security_2to-do.html#autotoc_md236',1,'']]],
+  ['10_20threaded_20kernel_20workers_20smp_20optimized_20strong_11',['&lt;strong&gt;10. Threaded Kernel Workers (SMP Optimized)&lt;/strong&gt;',['../df/d92/md_BeyondScope_2VerticalPerf.html#autotoc_md49',1,'']]],
+  ['11_20build_20deployment_20hardening_20strong_12',['&lt;strong&gt;11. Build &amp; Deployment Hardening&lt;/strong&gt;',['../d8/d1a/md_Security_2to-do.html#autotoc_md241',1,'']]],
+  ['11_20hardware_20crypto_20acceleration_20strong_13',['&lt;strong&gt;11. Hardware Crypto Acceleration&lt;/strong&gt;',['../df/d92/md_BeyondScope_2VerticalPerf.html#autotoc_md52',1,'']]],
+  ['11_20kernel_20crypto_20key_20vault_20strong_14',['&lt;strong&gt;11. Kernel Crypto Key Vault&lt;/strong&gt;',['../df/d3d/md_BeyondScope_2VerticalSec.html#autotoc_md81',1,'']]],
+  ['12_20hardware_20access_20controller_20strong_15',['&lt;strong&gt;12. Hardware Access Controller&lt;/strong&gt;',['../df/d3d/md_BeyondScope_2VerticalSec.html#autotoc_md84',1,'']]],
+  ['12_20nic_20fast_20queues_20multi_20queue_20scheduling_20strong_16',['&lt;strong&gt;12. NIC Fast Queues + Multi-Queue Scheduling&lt;/strong&gt;',['../df/d92/md_BeyondScope_2VerticalPerf.html#autotoc_md53',1,'']]],
+  ['12_20production_20level_20modules_20you_20must_20implement_20strong_17',['🚀 &lt;strong&gt;12. Production-Level Modules You Must Implement&lt;/strong&gt;',['../d8/d1a/md_Security_2to-do.html#autotoc_md243',1,'']]],
+  ['13_20nic_20secure_20mode_20strong_18',['&lt;strong&gt;13. NIC Secure Mode&lt;/strong&gt;',['../df/d3d/md_BeyondScope_2VerticalSec.html#autotoc_md85',1,'']]],
+  ['13_20phy_20auto_20tuning_20engine_20strong_19',['&lt;strong&gt;13. PHY Auto-Tuning Engine&lt;/strong&gt;',['../df/d92/md_BeyondScope_2VerticalPerf.html#autotoc_md54',1,'']]],
+  ['14_20energy_20optimization_20layer_20strong_20',['&lt;strong&gt;14. Energy Optimization Layer&lt;/strong&gt;',['../df/d92/md_BeyondScope_2VerticalPerf.html#autotoc_md55',1,'']]],
+  ['14_20secure_20dma_20guard_20strong_21',['&lt;strong&gt;14. Secure DMA Guard&lt;/strong&gt;',['../df/d3d/md_BeyondScope_2VerticalSec.html#autotoc_md86',1,'']]],
+  ['15_20dma_20offloading_20strong_22',['&lt;strong&gt;15. DMA Offloading&lt;/strong&gt;',['../df/d92/md_BeyondScope_2VerticalPerf.html#autotoc_md56',1,'']]],
+  ['15_20hardware_20root_20of_20trust_20validation_20strong_23',['&lt;strong&gt;15. Hardware Root-of-Trust Validation&lt;/strong&gt;',['../df/d3d/md_BeyondScope_2VerticalSec.html#autotoc_md87',1,'']]]
+];

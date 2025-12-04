@@ -57,6 +57,18 @@ target_compile_options(DataExSys PRIVATE
     -Werror # Optional: treat warnings as errors for very strict builds
 )
 
+# --- Doxygen Documentation (Optional) ---
+# Find Doxygen and create a 'docs' target if found.
+find_package(Doxygen)
+if(DOXYGEN_FOUND)
+    message(STATUS "Doxygen found. You can build the documentation with 'make docs'")
+    add_custom_target(docs
+        COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_SOURCE_DIR}/Doxyfile
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        COMMENT "Generating API documentation with Doxygen..."
+        VERBATIM
+    )
+endif()
 
 # --- Final Output Message ---
 message(STATUS "Project configured. Build with 'cmake --build .'")

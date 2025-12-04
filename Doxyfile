@@ -1,0 +1,44 @@
+# Doxyfile for DataExSys
+
+# --- Project Details ---
+PROJECT_NAME           = "DataExSys SDK"
+PROJECT_BRIEF          = "A C++ SDK for the Decentralized Data Exchange System."
+PROJECT_LOGO           =
+OUTPUT_DIRECTORY       = "Docs/api"
+CREATE_SUBDIRS         = YES
+
+# --- Input Sources ---
+INPUT                  = .
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.cpp *.md
+EXCLUDE                = build .git
+
+# --- Main Page ---
+# Use the markdown file in Docs/ as the main index page.
+USE_MDFILE_AS_MAINPAGE = Docs/mainpage.md
+
+# --- Documentation Extraction ---
+# Extract all entities, even if undocumented.
+EXTRACT_ALL            = YES
+# Do not extract private class members.
+EXTRACT_PRIVATE        = NO
+# Extract static members.
+EXTRACT_STATIC         = YES
+
+# --- Output Format ---
+# Generate HTML documentation.
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+
+# Disable LaTeX generation to keep it simple.
+GENERATE_LATEX         = NO
+
+# --- Graph and Diagram Generation ---
+# Enable Graphviz (dot) to generate diagrams.
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+UML_LOOK               = YES
+UML_LIMIT_NUM_FIELDS   = 10
+TEMPLATE_RELATIONS     = YES
