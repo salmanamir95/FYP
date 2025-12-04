@@ -153,30 +153,6 @@ Blockchain/PKCertChain/PKCertChain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.s
 .PHONY : Blockchain/PKCertChain/PKCertChain.cpp.s
 
-CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.o: CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
-.PHONY : CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.o
-
-# target to build an object file
-CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
-.PHONY : CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
-
-CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.i: CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-.PHONY : CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.i
-
-# target to preprocess a source file
-CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-.PHONY : CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-
-CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.s: CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-.PHONY : CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.s
-
-# target to generate assembly for a file
-CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-.PHONY : CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-
 Consensus/PoW.o: Consensus/PoW.cpp.o
 .PHONY : Consensus/PoW.o
 
@@ -201,6 +177,30 @@ Consensus/PoW.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.s
 .PHONY : Consensus/PoW.cpp.s
 
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +213,12 @@ help:
 	@echo "... Blockchain/PKCertChain/PKCertChain.o"
 	@echo "... Blockchain/PKCertChain/PKCertChain.i"
 	@echo "... Blockchain/PKCertChain/PKCertChain.s"
-	@echo "... CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.o"
-	@echo "... CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.i"
-	@echo "... CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.s"
 	@echo "... Consensus/PoW.o"
 	@echo "... Consensus/PoW.i"
 	@echo "... Consensus/PoW.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

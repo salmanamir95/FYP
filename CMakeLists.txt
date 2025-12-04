@@ -18,15 +18,16 @@ find_package(OpenSSL REQUIRED)
 find_package(Threads REQUIRED)
 
 # --- Project Sources ---
-# Use GLOB_RECURSE to automatically find all .cpp files in the project.
-# This is convenient for smaller projects.
-file(GLOB_RECURSE PROJECT_SOURCES
-    "*.cpp" # Find .cpp files in the root directory
-    "Blockchain/**/*.cpp"
-    "Consensus/**/*.cpp"
-    "Helper/**/*.cpp"
-    "Security/**/*.cpp"
-)
+# Use specific GLOB commands for each source directory to avoid scanning the build directory.
+file(GLOB ROOT_SOURCES      RELATIVE ${CMAKE_SOURCE_DIR} "*.cpp")
+file(GLOB BLOCKCHAIN_SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "Blockchain/PKCertChain/*.cpp")
+file(GLOB CONSENSUS_SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "Consensus/*.cpp")
+# Helper and Security directories do not contain .cpp files, only .h files.
+
+set(PROJECT_SOURCES
+    ${ROOT_SOURCES}
+    ${BLOCKCHAIN_SOURCES}
+    ${CONSENSUS_SOURCES})
 
 # --- Create the Executable ---
 # Add an executable target named 'DataExSys' using the source files found.

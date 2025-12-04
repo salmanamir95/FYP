@@ -69,10 +69,24 @@ include CMakeFiles/DataExSys.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DataExSys.dir/flags.make
 
+CMakeFiles/DataExSys.dir/main.cpp.o: CMakeFiles/DataExSys.dir/flags.make
+CMakeFiles/DataExSys.dir/main.cpp.o: /home/lenovo/Public/FYP/main.cpp
+CMakeFiles/DataExSys.dir/main.cpp.o: CMakeFiles/DataExSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/Public/FYP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DataExSys.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DataExSys.dir/main.cpp.o -MF CMakeFiles/DataExSys.dir/main.cpp.o.d -o CMakeFiles/DataExSys.dir/main.cpp.o -c /home/lenovo/Public/FYP/main.cpp
+
+CMakeFiles/DataExSys.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DataExSys.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenovo/Public/FYP/main.cpp > CMakeFiles/DataExSys.dir/main.cpp.i
+
+CMakeFiles/DataExSys.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DataExSys.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenovo/Public/FYP/main.cpp -o CMakeFiles/DataExSys.dir/main.cpp.s
+
 CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o: CMakeFiles/DataExSys.dir/flags.make
 CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o: /home/lenovo/Public/FYP/Blockchain/PKCertChain/PKCertChain.cpp
 CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o: CMakeFiles/DataExSys.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/Public/FYP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/Public/FYP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o -MF CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o.d -o CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o -c /home/lenovo/Public/FYP/Blockchain/PKCertChain/PKCertChain.cpp
 
 CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.s: cmake_force
 CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o: CMakeFiles/DataExSys.dir/flags.make
 CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o: /home/lenovo/Public/FYP/Consensus/PoW.cpp
 CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o: CMakeFiles/DataExSys.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/Public/FYP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/Public/FYP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o -MF CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o.d -o CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o -c /home/lenovo/Public/FYP/Consensus/PoW.cpp
 
 CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.i: cmake_force
@@ -97,32 +111,18 @@ CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenovo/Public/FYP/Consensus/PoW.cpp -o CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.s
 
-CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: CMakeFiles/DataExSys.dir/flags.make
-CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
-CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: CMakeFiles/DataExSys.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/Public/FYP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -MF CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o.d -o CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/lenovo/Public/FYP/build/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
-
-CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenovo/Public/FYP/build/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp > CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-
-CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenovo/Public/FYP/build/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp -o CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-
 # Object files for target DataExSys
 DataExSys_OBJECTS = \
+"CMakeFiles/DataExSys.dir/main.cpp.o" \
 "CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o" \
-"CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o" \
-"CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
+"CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o"
 
 # External object files for target DataExSys
 DataExSys_EXTERNAL_OBJECTS =
 
+DataExSys: CMakeFiles/DataExSys.dir/main.cpp.o
 DataExSys: CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o
 DataExSys: CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o
-DataExSys: CMakeFiles/DataExSys.dir/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
 DataExSys: CMakeFiles/DataExSys.dir/build.make
 DataExSys: /usr/lib/x86_64-linux-gnu/libcrypto.so
 DataExSys: CMakeFiles/DataExSys.dir/link.txt
