@@ -1,5 +1,13 @@
 # Doxygen API documentation output
 # This directory contains generated HTML files and should not be committed.
 /Docs/api/
-/BeyondScope
-/build
+
+# Build output directory
+/build/
+
+# Out of scope ideas and research
+/BeyondScope/
+
+# FYP Report source files and compressed archives
+/F25_079/
+*.zip
