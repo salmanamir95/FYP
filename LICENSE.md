@@ -1,10 +1,13 @@
-## Citation
+## Citation & Attribution
 
 This software is free to use, modify, and distribute under the MIT License.
 
-If you use this software in your research, please cite our paper and give credit to the authors.
-
+### Academic Use
+If you use this software in your research, please cite our paper:
 > Ahmed Nasir, Aanish Waseem, & Muhammad Salman Amir. (2024). *Secure Data Exchange System for Ad-hoc Networks Using Blockchain-Enhanced DSR*.
+
+### Commercial & Developer Use
+In accordance with the MIT License, if you use this software or any part of it in a commercial product or other project, you are required to include the original copyright and license notice. This is the standard way of giving credit.
 
 ---
 
