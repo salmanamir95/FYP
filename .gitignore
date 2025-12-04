@@ -1,0 +1,5 @@
+# Doxygen API documentation output
+# This directory contains generated HTML files and should not be committed.
+/Docs/api/
+/BeyondScope
+/build

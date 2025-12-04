@@ -73,32 +73,43 @@ $(function() {
   <div class="headertitle"><div class="title">DataExSys: Decentralized Data Exchange System</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md92"></a> <a href="https://isocpp.org/"><img src="https://img.shields.io/badge/language-C%2B%2B20-blue.svg" alt="Language" style="pointer-events: none;" class="inline"/></a> <a href="https://cmake.org/"><img src="https://img.shields.io/badge/build-CMake-green.svg" alt="Build" style="pointer-events: none;" class="inline"/></a> [<img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" alt="License" style="pointer-events: none;" class="inline"/>](LICENSE)</p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md119"></a> <a href="https://isocpp.org/"><img src="https://img.shields.io/badge/language-C%2B%2B20-blue.svg" alt="Language" style="pointer-events: none;" class="inline"/></a> <a href="https://cmake.org/"><img src="https://img.shields.io/badge/build-CMake-green.svg" alt="Build" style="pointer-events: none;" class="inline"/></a> [<img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" alt="License" style="pointer-events: none;" class="inline"/>](LICENSE)</p>
 <p><b>DataExSys</b> is a secure, decentralized data exchange system built in modern C++20. It uses a lightweight blockchain for identity management and efficient cryptography to enable secure communication between nodes, making it suitable for environments like IoT networks and Mobile Ad-hoc Networks (MANETs).</p>
-<h1><a class="anchor" id="autotoc_md93"></a>
-Key Features</h1>
+<p>This project serves as the reference implementation for the paper: <em>Secure Data Exchange System for Ad-hoc Networks Using Blockchain-Enhanced DSR</em>.</p>
+<h1><a class="anchor" id="autotoc_md120"></a>
+Core Architectural Features</h1>
 <ul>
 <li><b>Decentralized Identity:</b> Node identities are managed on a distributed, tamper-resistant blockchain of public key certificates (<code><a class="el" href="../../db/dce/classPKCertChain.html">PKCertChain</a></code>).</li>
-<li><b>Modern &amp; Secure Cryptography:</b> Utilizes <code>Ed25519</code> for fast and secure digital signatures, implemented via OpenSSL's <code>libcrypto</code>.</li>
-<li><b>Modern C++:</b> Written entirely in C++20, leveraging modern features for concurrency (<code>std::jthread</code>), safety, and performance.</li>
-<li><b>Modular Architecture:</b> A clean separation between the blockchain logic, consensus mechanism, and security primitives.</li>
+<li><b>Multi-Layer Blockchain:</b> The system uses a specialized, multi-layer blockchain architecture to separate concerns and improve performance:<ul>
+<li><code><a class="el" href="../../db/dce/classPKCertChain.html">PKCertChain</a></code>: Manages node identity, registration, and certificate lifecycle.</li>
+<li><code>RouteLogChain</code>: Securely logs routing paths and packet transmissions, enabling auditability and attack detection.</li>
+</ul>
+</li>
+<li><b>Advanced Attack Mitigation:</b> The architecture is explicitly designed to detect and mitigate common ad-hoc network attacks:<ul>
+<li><b>Sybil Attacks:</b> Prevented by the robust consensus mechanism on the <code><a class="el" href="../../db/dce/classPKCertChain.html">PKCertChain</a></code>.</li>
+<li><b>Blackhole Attacks:</b> Mitigated by the <code>LocalTrustDiary</code> reputation system.</li>
+<li><b>Wormhole Attacks:</b> Detected and prevented using <code>Rolling Signatures</code> on data packets.</li>
+<li><b>Replay Attacks:</b> Thwarted by checking for duplicate transactions in the <code>RouteLogChain</code>.</li>
+</ul>
+</li>
+<li><b>Modern C++ &amp; Tooling:</b> Written entirely in C++20/23, leveraging modern features for concurrency, safety, and performance.</li>
 <li><b>Cross-Platform Build:</b> Uses CMake for a consistent build experience across different platforms.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md95"></a>
+<h1><a class="anchor" id="autotoc_md122"></a>
 Getting Started</h1>
 <p>Follow these instructions to get a copy of the project up and running on your local machine for development and testing.</p>
-<h2><a class="anchor" id="autotoc_md96"></a>
+<h2><a class="anchor" id="autotoc_md123"></a>
 1. Prerequisites</h2>
 <p>Before you begin, ensure you have the necessary development tools installed. You can use the provided shell script to check your environment:</p>
 <div class="fragment"><div class="line">chmod +x ./checktools.sh</div>
 <div class="line">./checktools.sh</div>
 </div><!-- fragment --><p>This will verify that <code>g++</code>, <code>cmake</code>, <code>git</code>, <code>openssl</code>, and other essential tools are available on your system.</p>
-<h2><a class="anchor" id="autotoc_md97"></a>
+<h2><a class="anchor" id="autotoc_md124"></a>
 2. Clone the Repository</h2>
 <div class="fragment"><div class="line">git clone &lt;your-repository-url&gt;</div>
 <div class="line">cd FYP</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md98"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md125"></a>
 3. Build the Project</h2>
 <p>This project uses a standard out-of-source CMake build process.</p>
 <div class="fragment"><div class="line"># Create a build directory</div>
@@ -111,23 +122,25 @@ Getting Started</h1>
 <div class="line">cmake --build .</div>
 </div><!-- fragment --><p>This will create an executable named <code>DataExSys</code> inside the <code>build</code> directory.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md100"></a>
+<h1><a class="anchor" id="autotoc_md127"></a>
 Usage</h1>
 <p>After a successful build, you can run the application from the <code>build</code> directory:</p>
 <div class="fragment"><div class="line">./DataExSys</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md101"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md128"></a>
 Project Structure</h1>
-<p>The codebase is organized into the following main directories:</p>
+<p>The codebase is organized into the following directories:</p>
 <ul>
-<li><code>Blockchain/</code>: Contains the logic for the Public Key Certificate chain.</li>
-<li><code>Consensus/</code>: Houses the consensus algorithm for agreeing on the state of the blockchain.</li>
-<li><code>Security/</code>: Contains cryptographic helper functions (wrapping OpenSSL).</li>
-<li><code>Helper/</code>: General-purpose utility code and data structures.</li>
+<li><code>Blockchain/</code>: Contains the implementation for the <code><a class="el" href="../../db/dce/classPKCertChain.html">PKCertChain</a></code> and <code>RouteLogChain</code>.</li>
+<li><code>Consensus/</code>: Houses the consensus algorithms (PoW, Quorum).</li>
+<li><code>Security/</code>: Contains cryptographic helpers (wrapping OpenSSL for Ed25519, etc.).</li>
+<li><code>Helper/</code>: General-purpose utilities and data structures.</li>
+<li><code>Docs/</code>: Contains all project documentation, including the API reference, architecture, and guides.</li>
+<li><code>F25_079/</code>: Contains the LaTeX source for the academic research paper.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md102"></a>
+<h1><a class="anchor" id="autotoc_md129"></a>
 Contributing</h1>
 <p>Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are <b>greatly appreciated</b>. Please see <code>CONTRIBUTING.md</code> for details on our code of conduct and the process for submitting pull requests.</p>
-<h1><a class="anchor" id="autotoc_md103"></a>
+<h1><a class="anchor" id="autotoc_md130"></a>
 License</h1>
 <p>This project is licensed under the MIT License - see the <code>LICENSE</code> file for details. </p>
 </div></div><!-- contents -->

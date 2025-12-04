@@ -8,8 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/lenovo/Public/FYP/Blockchain/PKCertChain/PKCertChain.cpp" "CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o" "gcc" "CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o.d"
-  "/home/lenovo/Public/FYP/Consensus/PoW.cpp" "CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o" "gcc" "CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o.d"
   "/home/lenovo/Public/FYP/main.cpp" "CMakeFiles/DataExSys.dir/main.cpp.o" "gcc" "CMakeFiles/DataExSys.dir/main.cpp.o.d"
   )
 

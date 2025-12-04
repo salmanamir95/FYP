@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/DataExSys.dir/main.cpp.o CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o -o DataExSys  /usr/lib/x86_64-linux-gnu/libcrypto.so 
+/usr/bin/c++ CMakeFiles/DataExSys.dir/main.cpp.o -o DataExSys  /usr/lib/x86_64-linux-gnu/libcrypto.so 

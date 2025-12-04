@@ -73,8 +73,8 @@ $(function() {
   <div class="headertitle"><div class="title">✅ &lt;strong&gt;CURATED SYSTEM CHECKLIST (Your Project Roadmap)&lt;/strong&gt;</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md216"></a> </p>
-<h1><a class="anchor" id="autotoc_md217"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md243"></a> </p>
+<h1><a class="anchor" id="autotoc_md244"></a>
 &lt;strong&gt;1. Concurrency Architecture&lt;/strong&gt;</h1>
 <ul>
 <li>[ ] Create a <b>Thread Pool</b> dedicated to crypto operations</li>
@@ -85,7 +85,7 @@ $(function() {
 <li>[ ] Implement <b>thread-local key caching</b> (public keys, private keys)</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md219"></a>
+<h1><a class="anchor" id="autotoc_md246"></a>
 &lt;strong&gt;2. Cryptography Safety Layers&lt;/strong&gt;</h1>
 <ul>
 <li>[ ] Zero all sensitive buffers with <code>OPENSSL_cleanse()</code></li>
@@ -96,7 +96,7 @@ $(function() {
 <li>[ ] Maintain a <b>crypto error stack logger</b> (<code>ERR_get_error()</code>)</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md221"></a>
+<h1><a class="anchor" id="autotoc_md248"></a>
 &lt;strong&gt;3. File-System &amp; OS-Level Security&lt;/strong&gt;</h1>
 <ul>
 <li>[ ] Store private keys in dedicated folder with chmod <b>600</b></li>
@@ -107,9 +107,9 @@ $(function() {
 <li>[ ] Memory-map public key files read-only (optional optimization)</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md223"></a>
+<h1><a class="anchor" id="autotoc_md250"></a>
 &lt;strong&gt;4. Event-Driven Signature System ("Sign Queue")&lt;/strong&gt;</h1>
-<h3><a class="anchor" id="autotoc_md224"></a>
+<h3><a class="anchor" id="autotoc_md251"></a>
 Your crypto subsystem needs these components:</h3>
 <ul>
 <li>[ ] An <b>Event Dispatcher</b> that receives:<ul>
@@ -143,7 +143,7 @@ Your crypto subsystem needs these components:</h3>
 </li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md226"></a>
+<h1><a class="anchor" id="autotoc_md253"></a>
 &lt;strong&gt;5. Real-Time Ephemeral Key Exchange (MANET-grade)&lt;/strong&gt;</h1>
 <ul>
 <li>[ ] Use X25519 ephemeral keys per message</li>
@@ -153,7 +153,7 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] Verify signature <b>before</b> attempting AES-GCM decrypt</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md228"></a>
+<h1><a class="anchor" id="autotoc_md255"></a>
 &lt;strong&gt;6. Message Serialization / Wire Protocol&lt;/strong&gt;</h1>
 <p>Design a strict binary message format:</p>
 <div class="fragment"><div class="line">[Version]</div>
@@ -171,7 +171,7 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] Must refuse malformed messages</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md230"></a>
+<h1><a class="anchor" id="autotoc_md257"></a>
 &lt;strong&gt;7. Buffer Overflow Defense&lt;/strong&gt;</h1>
 <p><b>At code level:</b></p>
 <ul>
@@ -188,7 +188,7 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] Hardened malloc (optionally)</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md232"></a>
+<h1><a class="anchor" id="autotoc_md259"></a>
 &lt;strong&gt;8. Crypto Subsystem Reliability&lt;/strong&gt;</h1>
 <ul>
 <li>[ ] Add retry logic for corrupted or delayed key loading</li>
@@ -203,7 +203,7 @@ Your crypto subsystem needs these components:</h3>
 </li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md234"></a>
+<h1><a class="anchor" id="autotoc_md261"></a>
 &lt;strong&gt;9. Key Lifecycle Management&lt;/strong&gt;</h1>
 <ul>
 <li>[ ] Periodic Ed25519 key rotation</li>
@@ -213,16 +213,16 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] Detect key reuse &amp; duplicates</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md236"></a>
+<h1><a class="anchor" id="autotoc_md263"></a>
 &lt;strong&gt;10. Testing &amp; Validation&lt;/strong&gt;</h1>
-<h3><a class="anchor" id="autotoc_md237"></a>
+<h3><a class="anchor" id="autotoc_md264"></a>
 &lt;strong&gt;Crypto Tests&lt;/strong&gt;</h3>
 <ul>
 <li>[ ] Verify(Sign(Data)) → true</li>
 <li>[ ] Verify(Sign(Data), TamperedData) → false</li>
 <li>[ ] Verify(Sign(Data), WrongKey) → false</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md238"></a>
+<h3><a class="anchor" id="autotoc_md265"></a>
 &lt;strong&gt;Concurrency Tests&lt;/strong&gt;</h3>
 <ul>
 <li>[ ] 10k parallel Sign operations</li>
@@ -230,7 +230,7 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] Thread starvation prevention</li>
 <li>[ ] Deadlock detection</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md239"></a>
+<h3><a class="anchor" id="autotoc_md266"></a>
 &lt;strong&gt;Attack Simulation&lt;/strong&gt;</h3>
 <ul>
 <li>[ ] Replay attack</li>
@@ -240,7 +240,7 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] Timing attacks (measure &amp; randomize)</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md241"></a>
+<h1><a class="anchor" id="autotoc_md268"></a>
 &lt;strong&gt;11. Build &amp; Deployment Hardening&lt;/strong&gt;</h1>
 <ul>
 <li>[ ] Use the hardened build flags:</li>
@@ -254,10 +254,10 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] Prohibit debug logs in release builds</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md243"></a>
+<h1><a class="anchor" id="autotoc_md270"></a>
 🚀 &lt;strong&gt;12. Production-Level Modules You Must Implement&lt;/strong&gt;</h1>
 <p>Here’s a concise module list for your system:</p>
-<h3><a class="anchor" id="autotoc_md244"></a>
+<h3><a class="anchor" id="autotoc_md271"></a>
 &lt;strong&gt;Core Crypto Module&lt;/strong&gt;</h3>
 <ul>
 <li>[ ] KeygenManager (thread-safe)</li>
@@ -266,7 +266,7 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] EphemeralKeyManager (X25519 pool)</li>
 <li>[ ] AESGCMEngine (AEAD encryption/decryption)</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md245"></a>
+<h3><a class="anchor" id="autotoc_md272"></a>
 &lt;strong&gt;Event Modules&lt;/strong&gt;</h3>
 <ul>
 <li>[ ] EventLoop</li>
@@ -274,7 +274,7 @@ Your crypto subsystem needs these components:</h3>
 <li>[ ] DispatchRouter</li>
 <li>[ ] CallbackScheduler</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md246"></a>
+<h3><a class="anchor" id="autotoc_md273"></a>
 &lt;strong&gt;Security Modules&lt;/strong&gt;</h3>
 <ul>
 <li>[ ] KeyStore (secure key storage)</li>

@@ -129,53 +129,18 @@ DataExSys/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/build
 .PHONY : DataExSys/fast
 
-Blockchain/PKCertChain/PKCertChain.o: Blockchain/PKCertChain/PKCertChain.cpp.o
-.PHONY : Blockchain/PKCertChain/PKCertChain.o
+#=============================================================================
+# Target rules for targets named docs
 
-# target to build an object file
-Blockchain/PKCertChain/PKCertChain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.o
-.PHONY : Blockchain/PKCertChain/PKCertChain.cpp.o
+# Build rule for target.
+docs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 docs
+.PHONY : docs
 
-Blockchain/PKCertChain/PKCertChain.i: Blockchain/PKCertChain/PKCertChain.cpp.i
-.PHONY : Blockchain/PKCertChain/PKCertChain.i
-
-# target to preprocess a source file
-Blockchain/PKCertChain/PKCertChain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.i
-.PHONY : Blockchain/PKCertChain/PKCertChain.cpp.i
-
-Blockchain/PKCertChain/PKCertChain.s: Blockchain/PKCertChain/PKCertChain.cpp.s
-.PHONY : Blockchain/PKCertChain/PKCertChain.s
-
-# target to generate assembly for a file
-Blockchain/PKCertChain/PKCertChain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/Blockchain/PKCertChain/PKCertChain.cpp.s
-.PHONY : Blockchain/PKCertChain/PKCertChain.cpp.s
-
-Consensus/PoW.o: Consensus/PoW.cpp.o
-.PHONY : Consensus/PoW.o
-
-# target to build an object file
-Consensus/PoW.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.o
-.PHONY : Consensus/PoW.cpp.o
-
-Consensus/PoW.i: Consensus/PoW.cpp.i
-.PHONY : Consensus/PoW.i
-
-# target to preprocess a source file
-Consensus/PoW.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.i
-.PHONY : Consensus/PoW.cpp.i
-
-Consensus/PoW.s: Consensus/PoW.cpp.s
-.PHONY : Consensus/PoW.s
-
-# target to generate assembly for a file
-Consensus/PoW.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataExSys.dir/build.make CMakeFiles/DataExSys.dir/Consensus/PoW.cpp.s
-.PHONY : Consensus/PoW.cpp.s
+# fast build rule for target.
+docs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
+.PHONY : docs/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -209,13 +174,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... docs"
 	@echo "... DataExSys"
-	@echo "... Blockchain/PKCertChain/PKCertChain.o"
-	@echo "... Blockchain/PKCertChain/PKCertChain.i"
-	@echo "... Blockchain/PKCertChain/PKCertChain.s"
-	@echo "... Consensus/PoW.o"
-	@echo "... Consensus/PoW.i"
-	@echo "... Consensus/PoW.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
