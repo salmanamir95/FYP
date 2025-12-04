@@ -6,12 +6,20 @@
 
 **DataExSys** is a secure, decentralized data exchange system built in modern C++20. It uses a lightweight blockchain for identity management and efficient cryptography to enable secure communication between nodes, making it suitable for environments like IoT networks and Mobile Ad-hoc Networks (MANETs).
 
-## Key Features
+This project serves as the reference implementation for the paper: *Secure Data Exchange System for Ad-hoc Networks Using Blockchain-Enhanced DSR*.
+
+## Core Architectural Features
 
 *   **Decentralized Identity:** Node identities are managed on a distributed, tamper-resistant blockchain of public key certificates (`PKCertChain`).
-*   **Modern & Secure Cryptography:** Utilizes `Ed25519` for fast and secure digital signatures, implemented via OpenSSL's `libcrypto`.
-*   **Modern C++:** Written entirely in C++20, leveraging modern features for concurrency (`std::jthread`), safety, and performance.
-*   **Modular Architecture:** A clean separation between the blockchain logic, consensus mechanism, and security primitives.
+*   **Multi-Layer Blockchain:** The system uses a specialized, multi-layer blockchain architecture to separate concerns and improve performance:
+    *   `PKCertChain`: Manages node identity, registration, and certificate lifecycle.
+    *   `RouteLogChain`: Securely logs routing paths and packet transmissions, enabling auditability and attack detection.
+*   **Advanced Attack Mitigation:** The architecture is explicitly designed to detect and mitigate common ad-hoc network attacks:
+    *   **Sybil Attacks:** Prevented by the robust consensus mechanism on the `PKCertChain`.
+    *   **Blackhole Attacks:** Mitigated by the `LocalTrustDiary` reputation system.
+    *   **Wormhole Attacks:** Detected and prevented using `Rolling Signatures` on data packets.
+    *   **Replay Attacks:** Thwarted by checking for duplicate transactions in the `RouteLogChain`.
+*   **Modern C++ & Tooling:** Written entirely in C++20/23, leveraging modern features for concurrency, safety, and performance.
 *   **Cross-Platform Build:** Uses CMake for a consistent build experience across different platforms.
 
 ---
@@ -23,7 +31,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 ### 1. Prerequisites
 
 Before you begin, ensure you have the necessary development tools installed. You can use the provided shell script to check your environment:
-
+ 
 ```bash
 chmod +x ./checktools.sh
 ./checktools.sh
@@ -67,12 +75,14 @@ After a successful build, you can run the application from the `build` directory
 
 ## Project Structure
 
-The codebase is organized into the following main directories:
+The codebase is organized into the following directories:
 
-*   `Blockchain/`: Contains the logic for the Public Key Certificate chain.
-*   `Consensus/`: Houses the consensus algorithm for agreeing on the state of the blockchain.
-*   `Security/`: Contains cryptographic helper functions (wrapping OpenSSL).
-*   `Helper/`: General-purpose utility code and data structures.
+*   `Blockchain/`: Contains the implementation for the `PKCertChain` and `RouteLogChain`.
+*   `Consensus/`: Houses the consensus algorithms (PoW, Quorum).
+*   `Security/`: Contains cryptographic helpers (wrapping OpenSSL for Ed25519, etc.).
+*   `Helper/`: General-purpose utilities and data structures.
+*   `Docs/`: Contains all project documentation, including the API reference, architecture, and guides.
+*   `F25_079/`: Contains the LaTeX source for the academic research paper.
 
 ## Contributing
 

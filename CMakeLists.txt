@@ -18,16 +18,14 @@ find_package(OpenSSL REQUIRED)
 find_package(Threads REQUIRED)
 
 # --- Project Sources ---
-# Use specific GLOB commands for each source directory to avoid scanning the build directory.
-file(GLOB ROOT_SOURCES      RELATIVE ${CMAKE_SOURCE_DIR} "*.cpp")
-file(GLOB BLOCKCHAIN_SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "Blockchain/PKCertChain/*.cpp")
-file(GLOB CONSENSUS_SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "Consensus/*.cpp")
-# Helper and Security directories do not contain .cpp files, only .h files.
-
+# List all your source files explicitly for better build system reliability.
+# Add new .cpp files to this list as you create them.
 set(PROJECT_SOURCES
-    ${ROOT_SOURCES}
-    ${BLOCKCHAIN_SOURCES}
-    ${CONSENSUS_SOURCES})
+    main.cpp # Assuming you have a main.cpp
+    # Blockchain/PKCertChain/YourFile1.cpp
+    # Consensus/YourFile2.cpp
+)
+# Helper and Security directories do not contain .cpp files, only .h files, so they don't need to be listed here.
 
 # --- Create the Executable ---
 # Add an executable target named 'DataExSys' using the source files found.

@@ -1,25 +1,30 @@
 /**
-@mainpage DataExSys SDK Documentation
+@mainpage DataExSys: A Secure Decentralized Data Exchange System
 
 @section intro_sec Introduction
 
-Welcome to the developer documentation for the **DataExSys SDK**. This SDK provides the necessary tools to build applications that can securely participate in the DataExSys decentralized network.
+Welcome to the developer documentation for **DataExSys**, a C++ SDK for building secure, decentralized data exchange applications. This project is the reference implementation for the research paper, *Secure Data Exchange System for Ad-hoc Networks Using Blockchain-Enhanced DSR*.
 
-The core of the system is built around a decentralized identity ledger (`PKCertChain`) and modern, efficient cryptography (`Ed25519`) to ensure data integrity and authenticity.
+The system is designed for low-mobility Personal Area Networks (PANETs) and provides a robust framework for secure peer-to-peer communication, resistant to common network attacks like Sybil, Blackhole, and Wormhole attacks.
+
+@section core_features_sec Core Features
+
+- **Multi-Layer Blockchain**: A specialized architecture featuring a `PKCertChain` for identity and a `RouteLogChain` for routing audits.
+- **Bayesian Trust Management**: A `LocalTrustDiary` on each node to dynamically assess the trustworthiness of peers.
+- **Hybrid Consensus**: A lightweight Proof-of-Work combined with a density-aware Quorum mechanism for secure node registration.
+- **Modern C++**: Built with C++20/23 for performance, safety, and modern concurrency.
+
+@section quick_links_sec Quick Links
+
+- @subpage architecture
+- @subpage threat_model
+- @subpage mitigation_model
+- @subpage developer_guide
+- @subpage open_source_guide
+- @subpage product_guide
 
 @section getting_started_sec Getting Started
 
-To begin using the SDK, you should familiarize yourself with the core concepts:
-
-- **Node Identity**: How nodes generate keys and certificates.
-- **Signing & Verification**: The process of signing data with a private key and verifying it with a public key.
-- **Blockchain Interaction**: How to register a node's identity on the blockchain.
-
-@section modules_sec Core Modules
-
-The SDK is organized into several key modules:
-- **Security**: Provides cryptographic primitives for signing, verification, and key management.
-- **Blockchain**: Manages the `PKCertChain` and node identities.
-- **Consensus**: The underlying algorithm for network agreement.
+To get started with the codebase, clone the repository and follow the build instructions in the main README.md file. The API reference can be navigated using the links at the top of this page.
 
 */
